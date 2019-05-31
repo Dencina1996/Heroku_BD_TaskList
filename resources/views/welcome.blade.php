@@ -28,7 +28,7 @@
                 <br>
                 <label>Descripció: </label><input type="text" name="description">
                 <br>
-                <input type="submit" value="Afegir nova tasca" style="background-color: grey">
+                <input type="submit" value="Afegir nova tasca" style="background-color: white; color: black; text-align: center; margin: auto; padding-top: 20px;">
             </form>
         </div>
     <h2>Tasques per fer</h2>
