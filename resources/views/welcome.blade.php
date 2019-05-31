@@ -14,7 +14,9 @@
         <form action="/" method="POST">
             @csrf
             <label>Tasca: </label><input type="text" name="task">
+            <br>
             <label>Descripció: </label><input type="text" name="task">
+            <br>
             <input type="submit" value="Afegir nova tasca">
         </form>
     <h2>Tasques per fer</h2>
