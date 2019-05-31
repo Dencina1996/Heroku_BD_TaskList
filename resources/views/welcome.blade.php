@@ -7,10 +7,20 @@
         }
         table, tr, td { border: 1px solid black;
         }
+        div {   background-color: #d20b5d;
+                height: auto;
+                padding: 10px;
+                text-align: right;
+                clear: both;
+                width: 300px;
+                font-weight: bold;
+                color: white;
+                border: solid 3px black;
+        }
     </style>
 </head>
 <body>
-    <div style="width: 300px; height: auto; margin: 10px; background-color: blue; text-align: right;clear: both;">
+    <div>
         <h2 style="text-align: center; color: white;">Afegir tasca</h2>
             <form action="/add" method="POST">
                 @csrf
@@ -18,7 +28,7 @@
                 <br>
                 <label>Descripció: </label><input type="text" name="description">
                 <br>
-                <input type="submit" value="Afegir nova tasca" style="text-align: center; color: white; font-weight: bold;">
+                <input type="submit" value="Afegir nova tasca" style="background-color: grey">
             </form>
         </div>
     <h2>Tasques per fer</h2>
