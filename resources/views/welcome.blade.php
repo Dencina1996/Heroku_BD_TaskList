@@ -29,7 +29,10 @@
                 <td style="background-color: red">
                 </td>
                 <td>
-                    <a href="{{ action('Controller@deleteTask', ['id' => $remaining->id]) }}" >Esborrar</a>
+                    <form action="/delete/{{$remaining->id}}" method="POST">
+                        @csrf
+                        <input type="button" value="Esborrar">
+                    </form>
                 </td>
             </tr>
          @endforeach
