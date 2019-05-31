@@ -10,15 +10,15 @@
     </style>
 </head>
 <body>
-    <div style="width: 300px; height: auto; margin: 10px; background-color: blue; text-align: center;clear: both;">
-        <h2>Afegir tasca</h2>
+    <div style="width: 300px; height: auto; margin: 10px; background-color: blue; text-align: right;clear: both;">
+        <h2 style="text-align: center; color: white;">Afegir tasca</h2>
             <form action="/add" method="POST">
                 @csrf
                 <label>Tasca: </label><input type="text" name="task">
                 <br>
                 <label>Descripció: </label><input type="text" name="description">
                 <br>
-                <input type="submit" value="Afegir nova tasca">
+                <input type="submit" value="Afegir nova tasca" style="text-align: center; color: white; font-weight: bold;">
             </form>
         </div>
     <h2>Tasques per fer</h2>
