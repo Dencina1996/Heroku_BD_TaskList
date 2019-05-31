@@ -28,12 +28,12 @@
                 <br>
                 <label>Descripció: </label><input type="text" name="description">
                 <br>
-                <input type="submit" value="Afegir nova tasca" style="background-color: white; color: black; text-align: center; margin: auto; padding-top: 20px;">
+                <input type="submit" value="Afegir nova tasca" style="background-color: white; color: black; text-align: center; margin: auto; margin-top: 20px;">
             </form>
         </div>
     <h2>Tasques per fer</h2>
     <table border="1px">
-        <tr>
+        <tr style="background-color: grey">
             <td>Tasca</td>
             <td>Descripció</td>
             <td>Fet</td>
@@ -64,7 +64,7 @@
      </table>
      <h2>Tasques fetes</h2>
      <table border="1px">
-        <tr>
+        <tr style="background-color: grey">
             <td>Tasca</td>
             <td>Descripció</td>
             <td>Fet</td>
