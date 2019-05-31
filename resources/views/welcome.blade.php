@@ -10,15 +10,17 @@
     </style>
 </head>
 <body>
-    <h2>Afegir tasca</h2>
-        <form action="/add" method="POST">
-            @csrf
-            <label>Tasca: </label><input type="text" name="task">
-            <br>
-            <label>Descripció: </label><input type="text" name="description">
-            <br>
-            <input type="submit" value="Afegir nova tasca">
-        </form>
+    <div style="width: 300px; height: auto; margin: 10px; background-color: blue; text-align: center;">
+        <h2>Afegir tasca</h2>
+            <form action="/add" method="POST">
+                @csrf
+                <label>Tasca: </label><input type="text" name="task">
+                <br>
+                <label>Descripció: </label><input type="text" name="description">
+                <br>
+                <input type="submit" value="Afegir nova tasca">
+            </form>
+        </div>
     <h2>Tasques per fer</h2>
     <table border="1px">
         <tr>
@@ -38,7 +40,7 @@
                 <td style="background-color: red">
                     <form action="/done/{{$remaining->id}}" method="POST">
                         @csrf
-                        <input type="submit" value="" style="background:transparent; border:none;color:transparent;">
+                        <input type="submit" value="" style="width: 100%; border:none;color:transparent;">
                     </form>
                 </td>
                 <td>
