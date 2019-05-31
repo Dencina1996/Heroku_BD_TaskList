@@ -60,6 +60,7 @@
                     </form>
                 </td>
             </tr>
+            <b>* Pulsa sobre la casella "fet" en vermell per a acabar la tasca</b>
          @endforeach
      </table>
      <h2>Tasques fetes</h2>
