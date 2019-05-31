@@ -4,7 +4,7 @@
     <title>TESTING</title>
 </head>
 <body>
-     @foreach($data as $x)
+     @foreach($mydata as $x)
         {{$x}}
      @endforeach
      hello
