@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>TESTING</title>
+    <title>Task List</title>
     <style type="text/css">
         table { border-collapse: collapse;
         }
