@@ -15,7 +15,7 @@
             @csrf
             <label>Tasca: </label><input type="text" name="task">
             <br>
-            <label>Descripció: </label><input type="text" name="task">
+            <label>Descripció: </label><input type="text" name="description">
             <br>
             <input type="submit" value="Afegir nova tasca">
         </form>
