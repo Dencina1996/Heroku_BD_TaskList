@@ -14,3 +14,4 @@
 */
 
 Route::get('/', 'Controller@getTasks');
+Route::post('/delete/{id}', 'Controller@deleteTask');

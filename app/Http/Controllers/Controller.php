@@ -19,4 +19,9 @@ class Controller extends BaseController
       							'done' => $done
       	]);
     }
+
+    public function deleteTask(Request $request) {
+    	DB::table('tasks')->where('id', $request->input('toDone'))->delete();
+    	return back();
+    }
 }
