@@ -14,6 +14,6 @@ use Illuminate\Support\Facades\DB;
 */
 
 Route::get('/', function () {
-	$data = DB::table('tasks')->get();
+	$data = DB::select('SELECT * FROM tasks')->get();
     return view('welcome', [	'data' => $data]);
 });
