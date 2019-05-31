@@ -4,8 +4,8 @@
     <title>TESTING</title>
 </head>
 <body>
-     @foreach($mydata as $x)
-        {{$x[0]}}
+     @foreach($mydata as $data)
+        {{$data->task}}
      @endforeach
      hello
 </body>
