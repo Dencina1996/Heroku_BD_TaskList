@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\DB;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,5 +14,6 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+	$data = DB::table('tasks')->get();
+    return view('welcome', [	'data' => $data]);
 });
