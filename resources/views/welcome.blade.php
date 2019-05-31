@@ -28,13 +28,18 @@
                     {{$remaining->description}}
                 </td>
                 <td style="background-color: red">
-                    <form action="done" method="POST">
-                        <input type="hidden" name="done" value="{{$remaining->id}}">
+                    <form action="/done" method="POST">
+                        @csrf
+                        <input type="hidden" name="toDone" value="{{$remaining->id}}">
                         <input type="submit">
                     </form>
                 </td>
                 <td>
-                   <a href="/{{$remaining->id}}">Esborrar</a>
+                    <form action="/delete" method="POST">
+                        @csrf
+                        <input type="hidden" name="toDelete" value="{{$remaining->id}}">
+                        <input type="submit">
+                    </form>
                 </td>
             </tr>
          @endforeach
@@ -58,7 +63,7 @@
                 <td style="background-color: green">
                 </td>
                 <td>
-                    <a href="/{{$remaining->id}}">Esborrar</a>
+                    <a href="/delete/{{$remaining->id}}">Esborrar</a>
                 </td>
             </tr>
          @endforeach
