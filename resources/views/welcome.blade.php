@@ -8,6 +8,7 @@
         table, tr, td { border: 1px solid black;
         }
     </style>
+    @csrf
 </head>
 <body>
     <h2>Tasques per fer</h2>
@@ -27,9 +28,15 @@
                     {{$remaining->description}}
                 </td>
                 <td style="background-color: red">
+                    <form action="/done" method="POST">
+                        <input type="hidden" name="done" value="{{$remaining->id}}">
+                        <input type="submit">
+                    </form>
                 </td>
                 <td>
-                    <a href="/{{$remaining->id}}">Esborrar</a>
+                    <form action="/delete" method="POST">
+                        <input type="submit" name="delete" value="{{$remaining->id}}>
+                    </form>
                 </td>
             </tr>
          @endforeach
