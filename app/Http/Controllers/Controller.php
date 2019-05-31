@@ -33,8 +33,8 @@ class Controller extends BaseController
     	return back();
     }
 
-    public function deleteTask(Request $request) {
-    	DB::table('tasks')->where('id', $request->input('toDelete'))->delete();
-    	return back();
+    public function deleteTask($id) {
+    	DB::table('tasks')->where('id', $id)->delete();
+    	return redirect()->back();
     }
 }

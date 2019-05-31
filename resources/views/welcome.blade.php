@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Task List</title>
+    <title>TESTING</title>
     <style type="text/css">
         table { border-collapse: collapse;
         }
         table, tr, td { border: 1px solid black;
         }
     </style>
-    @csrf
 </head>
 <body>
     <h2>Tasques per fer</h2>
@@ -28,18 +27,9 @@
                     {{$remaining->description}}
                 </td>
                 <td style="background-color: red">
-                    <form action="/done" method="POST">
-                        @csrf
-                        <input type="hidden" name="toDone" value="{{$remaining->id}}">
-                        <input type="submit">
-                    </form>
                 </td>
                 <td>
-                    <form action="/delete" method="POST">
-                        @csrf
-                        <input type="hidden" name="toDelete" value="{{$remaining->id}}">
-                        <input type="submit">
-                    </form>
+                    <a href="{{ action('Controller@deleteTask', ['id' => $remaining->id]) }}" >Esborrar</a>
                 </td>
             </tr>
          @endforeach
@@ -63,7 +53,7 @@
                 <td style="background-color: green">
                 </td>
                 <td>
-                    <a href="/delete/{{$remaining->id}}">Esborrar</a>
+                    <a href="{{ action('Controller@deleteTask', ['id' => $done->id]) }}" >Esborrar</a>
                 </td>
             </tr>
          @endforeach
