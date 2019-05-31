@@ -5,7 +5,7 @@
 </head>
 <body>
      @foreach($mydata as $x)
-        {{$x}}
+        {{$x[0]}}
      @endforeach
      hello
 </body>
