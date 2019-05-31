@@ -26,6 +26,16 @@ class Controller extends BaseController
       	]);
     }
 
+    public function insertTask(Request $request) {
+    	DB::table('tasks')->insert([
+    		[	'task' => $request->input('task'),
+    			'description' => $request->input('description'),
+    			'status' => 0
+    		]
+    	]);
+    	return redirect()->back();
+    }
+
     public function updateTask($id) {
     	DB::table('tasks')->where('id', $id)->update([
     		'status' => 1

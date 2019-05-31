@@ -10,6 +10,13 @@
     </style>
 </head>
 <body>
+    <h2>Afegir tasca</h2>
+        <form action="/" method="POST">
+            @csrf
+            <label>Tasca: </label><input type="text" name="task">
+            <label>Descripció: </label><input type="text" name="task">
+            <input type="submit" value="Afegir nova tasca">
+        </form>
     <h2>Tasques per fer</h2>
     <table border="1px">
         <tr>
