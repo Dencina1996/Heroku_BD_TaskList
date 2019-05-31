@@ -28,7 +28,7 @@
                 <br>
                 <label>Descripció: </label><input type="text" name="description">
                 <br>
-                <input type="submit" value="Afegir nova tasca" style="background-color: white; color: black; text-align: center; margin: auto; margin-top: 20px;">
+                <input type="submit" value="Afegir nova tasca" style="background-color: white; color: black; text-align: center; margin: auto; margin-top: 20px; outline: none; border: solid 2px black; font-weight: bold;">
             </form>
         </div>
     <h2>Tasques per fer</h2>
@@ -50,7 +50,7 @@
                 <td style="background-color: red">
                     <form action="/done/{{$remaining->id}}" method="POST">
                         @csrf
-                        <input type="submit" value="" style="width: 100%; border:none;color:transparent; background-color: red;">
+                        <input type="submit" value="" style="width: 100%; border:none;color:transparent; background-color: red;" onmouseover="this.style.color='green'">
                     </form>
                 </td>
                 <td>
