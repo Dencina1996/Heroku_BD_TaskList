@@ -27,6 +27,10 @@
                     {{$remaining->description}}
                 </td>
                 <td style="background-color: red">
+                    <form action="/done/{{$remaining->id}}" method="POST">
+                        @csrf
+                        <input type="submit" value="Fet" style="outline: 0; background-color: green">
+                    </form>
                 </td>
                 <td>
                     <form action="/delete/{{$remaining->id}}" method="POST">
@@ -56,7 +60,10 @@
                 <td style="background-color: green">
                 </td>
                 <td>
-                    <a href="{{ action('Controller@deleteTask', ['id' => $done->id]) }}" >Esborrar</a>
+                    <form action="/delete/{{$done->id}}" method="POST">
+                        @csrf
+                        <input type="submit" value="Esborrar">
+                    </form>
                 </td>
             </tr>
          @endforeach

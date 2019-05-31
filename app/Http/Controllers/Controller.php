@@ -26,11 +26,11 @@ class Controller extends BaseController
       	]);
     }
 
-    public function updateTask(Request $request) {
-    	DB::table('tasks')->where('id', $request->input('toDone'))->update([
+    public function updateTask($id) {
+    	DB::table('tasks')->where('id', $id)->update([
     		'status' => 1
     	]);
-    	return back();
+    	return redirect()->back();
     }
 
     public function deleteTask($id) {
