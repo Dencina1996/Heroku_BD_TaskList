@@ -26,11 +26,10 @@
                     {{$data->description}}
                 </td>
                 <td>
-                    @if({{$data->status}} == 1)
-                        Fet
-                    @else
-                        Pendent
-                    @endif
+                    {{$data->status}}
+                </td>
+                <td>
+                    <a href="/delete/{{$data->id}}">Esborrar</a>
                 </td>
             </tr>
          @endforeach
