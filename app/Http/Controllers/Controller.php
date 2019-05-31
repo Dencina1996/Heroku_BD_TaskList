@@ -13,7 +13,7 @@ class Controller extends BaseController
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
     public function getTasks() {
-    	$data = DB::table('tasks');
+    	$data = DB::table('tasks')->get();
       
       
       //return response()->json(['data'=>$data]);
