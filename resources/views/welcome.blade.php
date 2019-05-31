@@ -4,6 +4,8 @@
     <title>TESTING</title>
 </head>
 <body>
-     dsfdsf
+     @foreach($data as $x)
+        {{$x}}
+     @endforeach
 </body>
 </html>
