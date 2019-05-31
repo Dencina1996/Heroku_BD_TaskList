@@ -29,7 +29,7 @@
                 <td style="background-color: red">
                     <form action="/done/{{$remaining->id}}" method="POST">
                         @csrf
-                        <input type="submit" value="Fet" style="outline: 0; background-color: green">
+                        <input type="submit" value="" style="background:transparent; border:none;color:transparent;">
                     </form>
                 </td>
                 <td>
