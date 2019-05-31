@@ -7,5 +7,6 @@
      @foreach($data as $x)
         {{$x}}
      @endforeach
+     hello
 </body>
 </html>
