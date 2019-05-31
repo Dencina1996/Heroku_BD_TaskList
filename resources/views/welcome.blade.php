@@ -26,7 +26,7 @@
                     {{$data->description}}
                 </td>
                 <td>
-                    @if ({{$data->status}} === '1')
+                    @if ({{$data->status}} === 1)
                         Fet
                     @else
                         Pendent ...
