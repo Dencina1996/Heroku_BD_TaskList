@@ -29,7 +29,7 @@
                 <td style="background-color: red">
                 </td>
                 <td>
-                    <a href="/delete/{{$remaining->id}}">Esborrar</a>
+                    <a href="/{{$remaining->id}}">Esborrar</a>
                 </td>
             </tr>
          @endforeach
