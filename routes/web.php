@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Support\Facades\DB;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,7 +13,4 @@ use Illuminate\Support\Facades\DB;
 |
 */
 
-Route::get('/', function () {
-	$data = DB::select('SELECT * FROM tasks')->get();
-    return view('welcome', [	'data' => $data]);
-});
+Route::get('/', 'Controller@getTasks');

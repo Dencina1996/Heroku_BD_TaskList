@@ -5,7 +5,7 @@
 </head>
 <body>
      @foreach($data as $data)
-        {{ $data }}
+        {{ $data[0] }}
      @endforeach
 </body>
 </html>
