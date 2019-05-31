@@ -50,7 +50,7 @@
                 <td style="background-color: red">
                     <form action="/done/{{$remaining->id}}" method="POST">
                         @csrf
-                        <input type="submit" value="" style="width: 100%; border:none;color:transparent;">
+                        <input type="submit" value="" style="width: 100%; border:none;color:transparent; background-color: red;">
                     </form>
                 </td>
                 <td>
