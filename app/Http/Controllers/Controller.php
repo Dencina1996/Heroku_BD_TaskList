@@ -14,7 +14,7 @@ class Controller extends BaseController
 
     public function getTasks() {
     	$remaining = DB::table('tasks')->where('status', '!=', 1)->get();
-    	$done = DB::table('tasks')->where('status', '==', 0)->get();
+    	$done = DB::table('tasks')->where('status', '=', 0)->get();
       	return view('welcome', ['remaining' => $remaining,
       							'done' => $done
       	]);
