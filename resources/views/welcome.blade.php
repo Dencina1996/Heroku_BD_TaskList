@@ -11,7 +11,7 @@
 </head>
 <body>
     <h2>Afegir tasca</h2>
-        <form action="/" method="POST">
+        <form action="/add" method="POST">
             @csrf
             <label>Tasca: </label><input type="text" name="task">
             <br>
