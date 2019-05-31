@@ -14,9 +14,6 @@ class Controller extends BaseController
 
     public function getTasks() {
     	$data = DB::table('tasks')->get();
-      
-      
-      //return response()->json(['data'=>$data]);
-      return view('welcome', ['mydata' => $data]);
+      	return view('welcome', ['mydata' => $data]);
     }
 }
