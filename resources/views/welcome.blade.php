@@ -47,10 +47,10 @@
                 <td>
                     {{$remaining->description}}
                 </td>
-                <td style="background-color: red">
+                <td style="background-color: red" onmouseover="this.style.color='green';">
                     <form action="/done/{{$remaining->id}}" method="POST">
                         @csrf
-                        <input type="submit" value="" style="width: 100%; border:none;color:transparent; background-color: red;" onmouseover="this.style.color='green'">
+                        <input type="submit" value="" style="width: 100%; border:none;color:transparent; background-color: red;">
                     </form>
                 </td>
                 <td>
