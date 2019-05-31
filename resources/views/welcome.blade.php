@@ -10,6 +10,7 @@
     </style>
 </head>
 <body>
+    <h2>Tasques per fer</h2>
     <table border="1px">
         <tr>
             <td>Tasca</td>
@@ -17,19 +18,42 @@
             <td>Fet</td>
             <td>Esborrar</td>
         </tr>
-         @foreach($mydata as $data)
+         @foreach($remaining as $remaining)
             <tr>
                 <td>
-                    {{$data->task}}
+                    {{$remaining->task}}
                 </td>
                 <td>
-                    {{$data->description}}
+                    {{$remaining->description}}
+                </td>
+                <td style="background-color: red">
                 </td>
                 <td>
-                    ({{$data->status}}
+                    <a href="/delete/{{$remaining->id}}">Esborrar</a>
+                </td>
+            </tr>
+         @endforeach
+     </table>
+     <h2>Tasques fetes</h2>
+     <table border="1px">
+        <tr>
+            <td>Tasca</td>
+            <td>Descripció</td>
+            <td>Fet</td>
+            <td>Esborrar</td>
+        </tr>
+         @foreach($done as $done)
+            <tr>
+                <td>
+                    {{$done->task}}
                 </td>
                 <td>
-                    <a href="/delete/{{$data->id}}">Esborrar</a>
+                    {{$done->description}}
+                </td>
+                <td style="background-color: green">
+                </td>
+                <td>
+                    <a href="/delete/{{$remaining->id}}">Esborrar</a>
                 </td>
             </tr>
          @endforeach
