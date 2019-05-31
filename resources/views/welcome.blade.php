@@ -35,7 +35,7 @@
                 </td>
                 <td>
                     <form action="/delete" method="POST">
-                        <input type="submit" name="delete" value="{{$remaining->id}}>
+                        <input type="submit" name="delete" value="{{$remaining->id}}">
                     </form>
                 </td>
             </tr>
