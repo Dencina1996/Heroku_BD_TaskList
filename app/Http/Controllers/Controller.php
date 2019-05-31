@@ -20,15 +20,8 @@ class Controller extends BaseController
       	]);
     }
 
-    public function updateTask(Request $request) {
-    	DB::table('tasks')->where('id', $request->input('done'))->update([
-    		'status' => 1
-    	]);
-    	return back();
-    }
-
-    public function deleteTask(Request $request) {
-    	DB::table('tasks')->where('id', $request->input('delete'))->delete();
+    public function deleteTask($id) {
+    	DB::table('tasks')->where('id', $id)->delete();
     	return back();
     }
 }

@@ -28,15 +28,13 @@
                     {{$remaining->description}}
                 </td>
                 <td style="background-color: red">
-                    <form action="/done" method="POST">
+                    <form action="done" method="POST">
                         <input type="hidden" name="done" value="{{$remaining->id}}">
                         <input type="submit">
                     </form>
                 </td>
                 <td>
-                    <form action="/delete" method="POST">
-                        <input type="submit" name="delete" value="{{$remaining->id}}">
-                    </form>
+                   <a href="/{{$remaining->id}}">Esborrar</a>
                 </td>
             </tr>
          @endforeach
@@ -60,7 +58,7 @@
                 <td style="background-color: green">
                 </td>
                 <td>
-                    <a href="/delete/{{$remaining->id}}">Esborrar</a>
+                    <a href="/{{$remaining->id}}">Esborrar</a>
                 </td>
             </tr>
          @endforeach
