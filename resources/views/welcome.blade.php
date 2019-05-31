@@ -27,9 +27,6 @@
                     {{$remaining->description}}
                 </td>
                 <td style="background-color: red">
-                    <form method="POST" action="/delete/{{$remaining->id}}">
-                        <input type="submit">
-                    </form>
                 </td>
                 <td>
                     <a href="/delete/{{$remaining->id}}">Esborrar</a>
