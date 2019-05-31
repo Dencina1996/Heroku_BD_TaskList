@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>TESTING</title>
+    <title>Dencina Task List - Heroku & Laravel</title>
     <style type="text/css">
         table { border-collapse: collapse;
         }
@@ -10,7 +10,7 @@
     </style>
 </head>
 <body>
-    <div style="width: 300px; height: auto; margin: 10px; background-color: blue; text-align: center;">
+    <div style="width: 300px; height: auto; margin: 10px; background-color: blue; text-align: center;clear: both;">
         <h2>Afegir tasca</h2>
             <form action="/add" method="POST">
                 @csrf
