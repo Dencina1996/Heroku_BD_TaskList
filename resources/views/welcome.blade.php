@@ -2,9 +2,15 @@
 <html>
 <head>
     <title>TESTING</title>
+    <style type="text/css">
+        table { border-collapse: collapse;
+        }
+        table, tr, td { border: 1px solid black;
+        }
+    </style>
 </head>
 <body>
-    <table border="15px">
+    <table border="1px">
         <tr>
             <td>Tasca</td>
             <td>Descripció</td>
@@ -18,6 +24,13 @@
                 </td>
                 <td>
                     {{$data->description}}
+                </td>
+                <td>
+                    @if({{$data->status}} = 1)
+                        Fet
+                    @else
+                        Pendent
+                    @endif
                 </td>
             </tr>
          @endforeach
