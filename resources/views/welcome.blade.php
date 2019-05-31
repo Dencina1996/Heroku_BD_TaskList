@@ -31,7 +31,7 @@
                 <td>
                     <form action="/delete/{{$remaining->id}}" method="POST">
                         @csrf
-                        <input type="button" value="Esborrar">
+                        <input type="submit" value="Esborrar">
                     </form>
                 </td>
             </tr>
